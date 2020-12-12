@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "978317083665",
+    "project_id": "chat-app-9a466",
+    "storage_bucket": "chat-app-9a466.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978317083665:android:01711550e50c4c0af0ddb0",
+        "android_client_info": {
+          "package_name": "com.northpaddy.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978317083665-rg3di0037leu4o97glij4tj4mkie575h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVGT0GWUeVOafU94ChMFkSfodLRybUNt0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978317083665-rg3di0037leu4o97glij4tj4mkie575h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
