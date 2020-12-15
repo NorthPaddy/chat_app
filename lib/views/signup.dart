@@ -3,7 +3,6 @@ import 'package:chat_app/services/auth.dart';
 import 'package:chat_app/views/chatRoomScreen.dart';
 import 'package:flutter/material.dart';
 
-
 class SignUp extends StatefulWidget {
   @override
   _SignUpState createState() => _SignUpState();
