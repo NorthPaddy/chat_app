@@ -1,5 +1,8 @@
 import 'package:chat_app/Widgets/widget.dart';
+import 'package:chat_app/services/auth.dart';
+import 'package:chat_app/views/chatRoomScreen.dart';
 import 'package:flutter/material.dart';
+
 
 class SignUp extends StatefulWidget {
   @override
@@ -9,15 +12,27 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   bool isLoading = false;
 
+  AuthService authService = AuthService();
+
   final formKey = GlobalKey<FormState>();
   TextEditingController userNameTextEditingController = TextEditingController();
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
 
-  signMeUp() {
+  signMeUp() async {
     if (formKey.currentState.validate()) {
       setState(() {
         isLoading = true;
+      });
+
+      await authService
+          .signUpWithEmailAndPassword(emailTextEditingController.text,
+              passwordTextEditingController.text)
+          .then((result) {
+        if (result != null) {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => ChatRoom()));
+        }
       });
     }
   }
