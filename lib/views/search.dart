@@ -7,6 +7,8 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
+  TextEditingController searchTextEditingController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +23,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 children: [
                   Expanded(
                       child: TextField(
+                        controller: searchTextEditingController,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                         hintText: "ユーザーの名前で探す",
