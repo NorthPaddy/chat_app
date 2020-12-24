@@ -23,7 +23,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 children: [
                   Expanded(
                       child: TextField(
-                        controller: searchTextEditingController,
+                    controller: searchTextEditingController,
                     style: TextStyle(color: Colors.white),
                     decoration: InputDecoration(
                         hintText: "ユーザーの名前で探す",
