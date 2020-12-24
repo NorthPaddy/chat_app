@@ -4,6 +4,9 @@ import 'package:chat_app/views/chatRoomScreen.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
+  final Function toggle;
+  SignUp(this.toggle);
+
   @override
   _SignUpState createState() => _SignUpState();
 }
@@ -151,12 +154,20 @@ class _SignUpState extends State<SignUp> {
                             "アカウントはありますか？",
                             style: mediumTextStyle(),
                           ),
-                          Text(
-                            'ログインはこちら',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              decoration: TextDecoration.underline,
+                          GestureDetector(
+                            onTap: () {
+                              widget.toggle();
+                            },
+                            child: Container(
+                              padding: EdgeInsets.symmetric(vertical: 8),
+                              child: Text(
+                                'ログインはこちら',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 15,
+                                  decoration: TextDecoration.underline,
+                                ),
+                              ),
                             ),
                           )
                         ],
